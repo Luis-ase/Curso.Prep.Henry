@@ -173,9 +173,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-if (numero % 1 === 0){return true;}
-else{return "falso"}
-
+if (numero < 2){
+  return "falso"
+}
+for (var i = 2; i < numero;i++){
+  if (numero % i == 0){
+    return false
+  }return true
+}
 }
 
 function esVerdadero(valor){
@@ -197,7 +202,9 @@ function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   
-  return numero.lenght < 3; 
+  if (numero <=999 && numero >=100){
+    return true
+  }return false
 }
 
 function doWhile(numero) {
